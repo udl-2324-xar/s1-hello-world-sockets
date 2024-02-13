@@ -16,7 +16,10 @@ public class HelloWorldClient {
             System.out.println("Client: he connectat! Anem a comunicar-nos");
             OutputStream os = s.getOutputStream();
             DataOutputStream dos = new DataOutputStream(os);
-            dos.writeInt(99);
+            dos.writeInt (123456);
+            dos.writeDouble (3.141592653589793);
+            dos.writeBoolean (true);
+            dos.writeUTF ("Hola Món!");
             dos.flush();
             dos.close();
             s.close();
