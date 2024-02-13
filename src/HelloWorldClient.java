@@ -13,6 +13,7 @@ public class HelloWorldClient {
         int port = 1234;
         try {
             Socket s = new Socket(host, port);
+            System.out.println("Client: he connectat! Anem a comunicar-nos");
             OutputStream os = s.getOutputStream();
             DataOutputStream dos = new DataOutputStream(os);
             dos.writeInt(99);
@@ -20,7 +21,7 @@ public class HelloWorldClient {
             dos.close();
             s.close();
         } catch (IOException e) {
-            System.out.println("err");
+            System.out.println("L'hem liat, no trobo el server.");
             throw new RuntimeException(e);
         }
     }
